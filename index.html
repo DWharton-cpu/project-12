@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+        <h1>The Code Review </h1>
+      
+     
+      <form action="index.html">
+        
+    
+        
+        <fieldset> <!-- FIELDSET organizes form elements, whatever it is wrapped around is what will be grouped together visually; LEGEND labels the fieldsets; the span element with the class number gives the fieldset descriptions an additional numbering for organization, and is optionals -->
+          
+          <center><legend><h2>Signup for our newsletter</h2></legend></center>
+          <center><p>Get the latest news on how your code is doing right in your inbox</p></center>
+          <center><span>_____________________________________________</span></center><br>
+          
+        <!-- input element is a self closing tag; type = what kind of input, id= what the information is (technically) & targets appropriate CSS etc, name=what the data typed in is supposed to represent 
+
+
+INPUT IS A SELF CLOSING TAG vv -->
+        
+        <!-- label element; the for element allows focus when the label name is clicked on in the browser window -->
+          <h2>Contact Information</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="user_name" class="">
+        
+           <label for="mail">Email Address</label>
+        <input type="email" id="mail" name="user_email" class="">
+        
+   <label for="password">Phone Number</label>
+        <input type="tel" id="password" name="user_password" class="">
+          
+            <label for="name">Street Address</label>
+        <input type="text" id="name" name="user_name" class="">
+          
+                      <label for="name">City</label>
+        <input type="text" id="name" name="user_name" class="">
+          
+          <label for="name">Zip Code</label>
+        <input type="text" id="name" name="user_name" class="">
+          
+            
+          <label for="job">State</label>
+          <select id="job" name="user_job">
+            <optgroup label="Web">
+          <option value="frontend_developer">Well Well Well</option>
+          <option value="php_developer">New York</option>
+          <option value="python_developer">Florida</option>
+          <option value="rails_developer">Georgia</option>
+          <option value="wordpress_developer">California</option>
+          <option value="web_designer">Well Well Well</option>
+              
+             <label for="name">Zip Code</label>
+        <input type="text" id="name" name="user_name" class="">
+              
+              <span>_______________________________________________________</span><br><br>
+          
+          <!-- LABELS are for RADIO BUTTONS (input type = radio) when there are 5 or fewer options in a form (ideal vs a drop down menu. In the case below, there are radio buttons for 2 age options, under and over 13. Radio buttons need to have the same name value in order to allow for one to be selected out of a group instead of selecting both vv-->
+              
+          <h2>Newsletter</h2><br>
+          <label> Newsletter Format </label><br>
+          <input type="radio" id="under_13" value="under_13" name="user_age">
+          <label for="under_13" class="light">HTML</label><br>
+            <input type="radio" id="over_13" value="over_13" name="user_age">
+          <label for="over_13" class="light">Plain Text</label>
+              
+        <!-- ^^ the input tag type value also impacts keyboard type on mobile input - name will have letters, email will have more options, and password will go back to normal. icons associated on the browser such as a person icon for the email cell body once clicked, are related to CSS -->
+              
+      <fieldset>
+        
+          <label>Select the newsletters you would like to recieve</label>
+          <input type="checkbox" id="development" value="interest_development" name:"user_interest"><label class="light" for "development">HTML News</label><br>
+          <input type="checkbox" id="design" value="interest_design" name:"user_interest"><label class="light" for "design">CSS News</label><br>
+          <input type="checkbox" id="business" value="interest_business" name:"user_interest"><label class="light" for "business">Javascript News</label>
+          
+           </fieldset>
+        
+                        <fieldset>
+          
+         
+           <label for="bio">Other things you'd like to hear about</label>
+        <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+        <!-- the text area allows for paragraphs to be written so the box is bigger (CSS Based still) and when multiple lines are written, there is a scroll bar. Browser Default setting has bottom page tuner logo on it so that user can adjust the space-->
+        <button type="submit">Sign Up</button>
+         
+      </form>
+      
+    </body>
+</html>
