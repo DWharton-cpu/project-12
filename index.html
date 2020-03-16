@@ -1,179 +1,98 @@
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  font-family: 'Merriweather', sans-serif;
-  color: #384047;
-  margin: 0;
-}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,300">
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
-form {
-  max-width: 300px;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background: #fff;
-  border-radius: 8px;
-}
-
-h1 {
-  margin: 00px 0 30px 0;
-  text-align: center;
-  background: #000;
-  color: white;
-  padding: 20px;
-}
-
-.classy {
-  margin: 0 0 30px 0;
-  text-align: center;
-  padding: 10px;
-}
-
-.heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-
-/*
-.heading h2 {
-  font-size: 1.5em;
-  line-height: 0;
-margin-top: -20px;
-}
-
-*/
-
-.heading h2, .underling {
- margin-top: -10px; 
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus {
-  border: 1px solid black;
-}
-
-.borderbot {
-  font-weight:400;
-}
+<body>
+  <h1>The Code Review</h1>
   
+  <form action="index.html">
+    
+    <div class="heading">
+      <h2>Signup for our newsletter</h2>
+      <p class="underling">Get the latest news on how your code is doing right in your inbox</p>
+    </div>
+    
+    <hr class="thick_line">
+    <hr>
+     <!-- FIELDSET organizes form elements, whatever it is wrapped around is what will be grouped together visually; LEGEND labels the fieldsets; the span element with the class number gives the fieldset descriptions an additional numbering for organization, and is optional -->
+    <fieldset>
+      <legend>Contact Information</legend><br>
+     
+      <!-- input element is a self closing tag; type = what kind of input, id= what the information is (technically) & targets appropriate CSS etc, name=what the data typed in is supposed to represent 
+INPUT IS A SELF CLOSING TAG vv -->
+      <!-- label element; the for element allows focus when the label name is clicked on in the browser window -->
+      
+      <label for="name">Full Name</label>
+      <input placeholder="Required" type="text" id="name" name="user_name">
 
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea,
-select {
-  background: rgba(255,255,255,0.1);
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  width: 100%;
-  background-color: #e8eeef;
-  color: #8a97a0;
-  margin-bottom: 30px;
-}
+      <label for="mail">Email Address</label>
+      <input placeholder="Required" type="email" id="mail" name="user_email">
 
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 0 4px 8px 0;
-}
+      <label for="password">Phone Number</label>
+      <input type="tel" id="password" name="user_password">
 
-select {
-  padding: 6px;
-  height: 45px;
-  border-radius: 2px;
-}
+      <label for="street">Street Address</label>
+      <input type="text" id="street" name="user_street">
 
-button {
-  padding: 19px 39px 18px 39px;
-  color: #FFF;
-  background-color: #49b0a6;
-  font-size: 18px;
-  text-align: center;
-  font-style: normal;
-  border-radius: 5px;
-  width: 100%;
-  margin-bottom: 10px;
-}
+      <label for="city">City</label>
+      <input type="text" id="city" name="user_city">
 
-hr{ 
-  height: 2px;
-  color: #000;
-  background-color: #000;
-  border: none;
-  margin: 3px 0;
-}
+      <label for="job">State</label>
+      <select id="job" name="user_job">
+        <optgroup label="Location">
+          <option value="state_sarcasm">Choose State</option>
+          <option value="New_York">New York</option>
+          <option value="Florida">Florida</option>
+          <option value="Georgia">Georgia</option>
+          <option value="California">California</option>
+          <option value="state_sarcasm">Well Well Well</option>
+        </optgroup>
+      </select>
+      
+      <label for="zipcode">Zip Code</label>
+      <input type="text" id="zipcode" name="user_zipcode">
+    </fieldset>
+    <hr>
 
-.thick_line {
-  border-bottom: 5px solid;
-  
-}
+      <!-- LABELS are for RADIO BUTTONS (input type = radio) when there are 5 or fewer options in a form (ideal vs a drop down menu. In the case below, there are radio buttons for 2 age options, under and over 13. Radio buttons need to have the same name value in order to allow for one to be selected out of a group instead of selecting both vv-->
+      <!-- ^^ the input tag type value also impacts keyboard type on mobile input - name will have letters, email will have more options, and password will go back to normal. icons associated on the browser such as a person icon for the email cell body once clicked, are related to CSS -->
+      <fieldset>
+      <legend>Newsletter</legend>
 
-fieldset {
-  margin: 30px 0;
-  border: none;
-  padding: 0;
-}
+      <h4>Select the newsletters you would like to receive</h4>
+      <input type="checkbox" id="html_news" name="user_interest">
+      <label class="light" for="html_news">HTML News</label><br>
 
-legend {
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  padding: 0;
-}
+      <input type="checkbox" id="css_news" name="user_interest">
+      <label class="light" for="css_news">CSS News</label><br>
+      
+      <input type="checkbox" id="js_news" name="user_interest">
+      <label class="light" for="js_news">Javascript News</label>
+      
+      <h4> Newsletter Format </h4>
+      <input type="radio" id="html" name="format">
+      <label for="html" class="light">HTML</label><br>
 
-label {
-  display: block;
-  margin-bottom: 8px;
-}
+      <input type="radio" id="plain_text" name="format">
+      <label for="plain_text" class="light">Plain Text</label><br><br>
+      
+      <label for="bio">Other things you'd like to hear about</label>
+      <textarea id="bio" name="user_bio"></textarea>
+      <!-- the text area allows for paragraphs to be written so the box is bigger (CSS Based still) and when multiple lines are written, there is a scroll bar. Browser Default setting has bottom page tuner logo on it so that user can adjust the space-->
+      <button type="submit">Sign Up</button>
+    </fieldset>
 
-label.light {
-  font-weight: 300;
-  display: inline;
-}
+    <p class="classy"> Copywright The Code Review</p>
+  </form>
 
-.number {
-  background-color: #5fcf80;
-  color: #fff;
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  font-size: 0.8em;
-  margin-right: 4px;
-  line-height: 30px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-  border-radius: 100%;
-}
+</body>
 
-#zipcode {
-  max-width: 50%;
-}
-
-@media screen and (min-width: 768px) {
-
-  form {
-    max-width: 600px;
-  }
-  
-  #zipcode {
-    max-width: 25%;
-  }
-#city {
-    max-width: 50%
-  }
-}
-
+</html>
