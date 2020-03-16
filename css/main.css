@@ -11,6 +11,7 @@ body {
 }
 
 form {
+  font-family: 'Merriweather', sans-serif;
   max-width: 300px;
   margin: 10px auto;
   padding: 10px 20px;
@@ -101,14 +102,16 @@ select {
 button {
   padding: 19px 39px 18px 39px;
   color: #FFF;
-  background-color: #000;
+  background-color: #49b0a6;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
   width: 100%;
   margin-bottom: 10px;
+  font-family: 'Merriweather', sans-serif;
 }
+
 
 hr{ 
   height: 2px;
