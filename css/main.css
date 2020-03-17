@@ -175,13 +175,30 @@ label.light {
     max-width: 600px;
   }
   
-  #zipcode {
-    max-width: 25%;
-  }
   
+  #zipcode {
+    max-width: 95%;
+    display: flex;
+  }
+ 
+  /*
 #city {
     max-width: 50%
+       display: flex;
+  } */
+  
+ .space {
+    padding-right: 10px;
   }
   
+  .somehow {
+    display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+}
+  
+  .zap {
+    padding-right: -50px;
+  }
 }
 
